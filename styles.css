@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
 * {
   box-sizing: border-box;
+  font-family: "Forum", "Times New Roman", Times, serif;
 }
 
 body {
@@ -13,41 +16,76 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  border: 0px solid black;
+  align-items: center;
+  border: 1px solid black;
   width: 100%;
   max-width: 100%;
-  padding: 0.5% 1%;
-  box-shadow: 0 0 10px black;
-  position: fixed;
-  top: 0;
+  padding: 0.2%;
+  box-shadow: 0 0 15px black;
   background-color: white;
   z-index: 2;
 }
 
 header img {
-  border: 1px solid white;
+  border: 0px solid white;
+  height: 260px;
+  height: auto;
   filter: invert(1);
 }
 
 #weatherholder {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+  height: 100%;
   width: 15%;
-  height: 50%;
+  font-size: 1.5rem;
+  padding: 0;
+}
+#weather {
+  display: flex;
+  justify-content: space-evenly;
+  border: 0px solid black;
+  align-items: center;
+  margin: 0;
+}
+#cancun {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+#temperature {
+  margin: 0;
+}
+#icon {
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
+  border: 0px solid black;
   width: 70%;
   max-width: 70%;
+  padding: 1%;
 }
 
 nav a {
   color: black;
   text-decoration: none;
   font-size: 1.5rem;
+  font-weight: bold;
+}
+nav a:hover {
+  transform: translate(2px, -2px);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 main {
@@ -60,21 +98,23 @@ main {
   width: 100%;
   max-width: 100%;
 }
+.hero {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 0px solid red;
+}
 .heroText {
   position: absolute;
-  top: 50vh;
+  top: 25%;
   margin: 0 auto;
   text-align: center;
   color: white;
-  text-shadow: 0 0 15px black;
+  text-shadow: 0 0 20px black;
   font-size: 1.5rem;
   z-index: 1;
-}
-
-main video {
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
 }
 
 #resortInfo {
@@ -98,7 +138,8 @@ main video {
 aside {
   width: 30%;
   max-width: 30%;
-  border: 1px solid black;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
   padding: 2%;
 }
 
@@ -107,7 +148,6 @@ footer {
   margin: 0;
   width: 100%;
   max-width: 100%;
-
   padding: 2%;
   color: black;
   display: flex;
@@ -131,7 +171,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
   margin: 2%;
   padding: 2%;
 }
@@ -143,7 +184,6 @@ footer {
   width: 45ch;
   max-width: 45ch;
   line-height: 1.2;
-  border: 1px solid black;
 }
 
 #other {
@@ -164,7 +204,8 @@ footer {
 }
 
 #spa article {
-  border: 1px solid black;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
   margin: 2%;
   padding: 4%;
 }
@@ -184,7 +225,8 @@ main img {
 }
 
 .rooms {
-  border: 1px solid black;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
   width: 95%;
   max-width: 100%;
   margin: 1%;
@@ -193,7 +235,8 @@ main img {
 
 /*Activities*/
 .activity {
-  border: 1px solid black;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
   width: 95%;
   max-width: 100%;
   margin: 1%;
@@ -217,4 +260,90 @@ main img {
 
 #subMenu {
   padding-left: 2%;
+}
+
+/*Booking*/
+#booking {
+  margin-top: 10%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 4%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+input {
+  margin: 2%;
+}
+#bookingfooter {
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  nav {
+    width: 100%;
+    max-width: 100%;
+  }
+  #resortInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  #resortInfo div {
+    width: 90%;
+    max-width: 90%;
+    margin: 2%;
+  }
+  aside {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  header img {
+    width: 150px;
+    max-width: 150px;
+  }
+  #dining article {
+    flex-direction: column;
+  }
+  #weatherholder {
+    font-size: 0.8rem;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .heroText {
+    top: 15%;
+  }
+  .heroText h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #resortInfo h2 {
+    font-size: 1.3rem;
+  }
+
+  #resortInfo h3 {
+    line-height: 0.2;
+  }
+
+  #spa {
+    display: flex;
+    flex-direction: column;
+  }
 }

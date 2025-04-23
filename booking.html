@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shangri-La Resort | Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="images/logo.svg"
+          alt="An image of Shangri-La Beach Resorts Logo"
+          width="250"
+          height="100"
+        />
+      </a>
+      <div id="weatherholder">
+        <p id="cancun"></p>
+        <div id="weather">
+          <p id="temperature"></p>
+          <img
+            src="#"
+            alt="An icon displaying the current weather"
+            width="20"
+            height="20"
+            id="icon"
+          />
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+        <a href="accomodations.html">Accomodations</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="booking.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1 id="booking">Book Your Stay With Us Now</h1>
+      <form action="#">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" name="checkin" required />
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" name="checkout" />
+        <label for="email">Email</label>
+        <input type="email" name="email" />
+        <input type="submit" value="Book Now" />
+      </form>
+    </main>
+    <footer id="bookingfooter"><small>Created for cprg-309-a</small></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
